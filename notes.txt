@@ -15,7 +15,23 @@ Running the project
         - It may be better to develop in standard SPA mode until adding PWA items
 
 Folder Structure
-    - src folder will be the main folder that concerns
+    - /src folder will be the main folder that concerns
     - The index.template.html file is the main html file
     - The q-app div will be where the main Vue component will be loaded
-    
+    - MainLayout.vue in layouts folder in the main layout for the app
+        - Within layouts pages are loaded
+        - This will be in the <router-view />
+    - The assets folder holds items such as images
+        - Anything in this folder will be processed by Webpack
+    - Boot files allow for code to be initialised prior to app starting
+        - This can be beneficial for plugins
+        - There is an axios.js boot file created by default
+            - Axios will be used during the project
+    - CSS folder will hold css depending on what options where chosen in setup
+    - There was a /src/statics folder this has been replaced by /public folder
+        - Assets can be added here to but will only be loaded not processed by Webpack
+
+Install Vue devtools on Chrome
+
+Vue.js should be understood prior (at least the basics) 
+
