@@ -35,3 +35,6 @@ Install Vue devtools on Chrome
 
 Vue.js should be understood prior (at least the basics) 
 
+Drawer component
+    - q-drawer can be removed from layout
+    - This is because a header and footer will be added
