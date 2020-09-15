@@ -1,0 +1,21 @@
+Quasar Framework
+    - https://quasar.dev/
+    - VueJS based
+    - A single codebase can be deployed to multiple platforms
+
+Running the project
+    - cd into the project folder
+    - To run the project
+        - At the cli enter -- quasar dev
+        - By default this is ran in SPA mode
+    - To run the project in PWA mode
+        - quasar dev -m pwa
+        - This mode will interfere with Hot Relaoding and other items
+            - This is down to doing stuff like caching
+        - It may be better to develop in standard SPA mode until adding PWA items
+
+Folder Structure
+    - src folder will be the main folder that concerns
+    - The index.template.html file is the main html file
+    - The q-app div will be where the main Vue component will be loaded
+    
