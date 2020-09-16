@@ -68,3 +68,19 @@ Changing Icons
     - To enlargen icons sizes use q-tab__icon
         - This will mean adding a style section to the main layout file
 
+Header Styles
+    - q-button can be removed as the drawer has made it redundant
+    - Quasar version number div can also be removed
+    - Text can be centered using the text-center property
+        - This will only work on desktops so using CSS will be better in this case
+    - The q-toolbar__title property will need to be adjusted
+    - This will be done using the text-align: center 
+
+Using custom font
+    -  Using Google Fonts and the Grand Hotel font
+        - https://fonts.google.com/specimen/Grand+Hotel
+    - Add the link to the indxe.template.html page
+    - Then add a global css class to enable components to use the style
+
+Hide footer
+    - For when larger displays are used
