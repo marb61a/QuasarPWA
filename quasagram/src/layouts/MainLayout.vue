@@ -20,9 +20,19 @@
     </q-header>
 
     <q-footer class="bg-white" bordered>
-        <q-tabs class="text-grey-10">
-          <q-route-tab to="/" name='home' icon='mail' label='Home'/>
-          <q-route-tab to="/camera" name='camera' icon='alarm' label='Camera'/>
+        <q-tabs 
+          class="text-grey-10" 
+          active-color="primary"
+          indicator-color="transparent"
+        >
+          <q-route-tab 
+            to="/" 
+            icon='eva-home-outline' 
+          />
+          <q-route-tab 
+            to="/camera" 
+            icon='eva-camera-outline' 
+          />
         </q-tabs>
     </q-footer>
 

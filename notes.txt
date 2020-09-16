@@ -52,4 +52,19 @@ Adding Style
     - Change text colour using class text-<colour>
     - Using the component API on the Quasar site will show available properties
     - To add a border add a bordered property
-    
+    - To differentiate active tab add active-colour property to q-tabs
+    - To remove line indicating active tab use the indicator-color and set to transparent
+
+Changing Icons
+    - By default Quasar uses Material Icons
+    - Project will use Eva Icons
+        - https://akveo.github.io/eva-icons/#/
+    - Adding libraries will be done in the quasar.conf.js file
+    - eva-icons should already be present
+        - If not then add in the extras section
+    - To use eva icons use eva-<icon name> property
+    - Name props can be removed from route tabs as they are for a content pane which is not being used
+    - Labels can also be removed
+    - To enlargen icons sizes use q-tab__icon
+        - This will mean adding a style section to the main layout file
+
