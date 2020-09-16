@@ -38,3 +38,18 @@ Vue.js should be understood prior (at least the basics)
 Drawer component
     - q-drawer can be removed from layout
     - This is because a header and footer will be added
+    - Sample code for components eg footer can be gotten from the Quasar site
+
+Adding header and footer
+    - Adding tabs -> In layoput q-tab will be inside q-tabs
+    - To add to Vue router change q-tab to q-route-tab 
+    - Then simply add a to directive along with the path wanted
+    - The footer will be for the mobile view of the app
+
+Adding Style
+    - Removing the elevated property will remove the shadow
+    - Add a background colour using bg-<colour>
+    - Change text colour using class text-<colour>
+    - Using the component API on the Quasar site will show available properties
+    - To add a border add a bordered property
+    
