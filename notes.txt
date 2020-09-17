@@ -83,4 +83,12 @@ Using custom font
     - Then add a global css class to enable components to use the style
 
 Hide footer
-    - For when larger displays are used
+    - For when larger displays are used (desktop)
+    - Quasar has breakpoint variables that can be used
+    - xs will be used as it covers up to 599px wide which should cover all mobile devices
+    - Many items will be hidden or rearranged on larger devices so global classes should be setup
+
+Navigation items
+    - Again for larger displays
+    - App will use buttons (flat round in this case)
+    - 

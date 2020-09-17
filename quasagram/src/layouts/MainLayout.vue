@@ -5,13 +5,14 @@
       bordered
     >
       <q-toolbar>
+        <q-button flat round color="primary" icon="card_giftcard" />
         <q-toolbar-title class="text-grand-hotel text-bold">
           Quasagram
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
 
-    <q-footer class="bg-white" bordered>
+    <q-footer class="bg-white small-screen-only" bordered>
         <q-tabs 
           class="text-grey-10" 
           active-color="primary"
