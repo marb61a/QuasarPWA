@@ -91,4 +91,11 @@ Hide footer
 Navigation items
     - Again for larger displays
     - App will use buttons (flat round in this case)
+    - Dense attribute will reduce padding around an icon
+    - directive order does matter and will affect rendering!!
+
+Make header better for desktops
+    - Just applies when using desktop
+    - There is a separator component available for visually separating components 
+        - These are both vertical and horizontal
     - 

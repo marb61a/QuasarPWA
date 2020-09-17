@@ -5,10 +5,30 @@
       bordered
     >
       <q-toolbar>
-        <q-button flat round color="primary" icon="card_giftcard" />
+        <q-btn
+          to="/camera"
+          class="large-screen-only"
+          icon="eva-camera-outline" 
+          size="18px"
+          round
+          flat 
+          dense
+        />
+        <q-separator 
+          vertical 
+        />
         <q-toolbar-title class="text-grand-hotel text-bold">
           Quasagram
         </q-toolbar-title>
+        <q-btn
+          to="/"
+          class="large-screen-only"
+          icon="eva-home-outline" 
+          size="18px"
+          round
+          flat 
+          dense
+        />
       </q-toolbar>
     </q-header>
 
@@ -48,7 +68,8 @@ export default {
 
 <style lang="sass">
   .q-toolbar__title
-    text-align: center;
+    @media(max-width: $breakpoint-xs-max)
+      text-align: center;
     font-size: 30px;
   .q-footer
     .q-tab__icon
