@@ -98,4 +98,12 @@ Make header better for desktops
     - Just applies when using desktop
     - There is a separator component available for visually separating components 
         - These are both vertical and horizontal
+    - Create a constrain class to prevent icons going to the far sides of a page (max-width)
+
+Creating Page content
+    - Use the constrain class to keep content centered on large screens
+    - Quasar has a built in padding directive : q-pa
+
+Create a list of posts
+    - Use the q-card component (flat-bordered)
     - 
