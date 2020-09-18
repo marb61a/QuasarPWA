@@ -113,4 +113,10 @@ Create a list of posts
     - q-card-section can be used to add a caption
     - Use text caption to add style for text
     - Use an array to hold posts -> add a data method to the script section
-
+    - Will be using an epoch style date
+        - Using the Date.now() function in the console in the browser to get the present date
+    - Using a v-for directive to loop through the posts array
+        - Posts are simply duplicates at this stage with different id numbers
+    - A key property is also needed to help identify each item (can prevent errors eg updating the wrong post)
+        - Use the post.id as a key
+    -

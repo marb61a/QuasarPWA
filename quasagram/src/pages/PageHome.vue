@@ -1,6 +1,12 @@
 <template>
   <q-page class="constrain q-pa-md">
-    <q-card class="card-post" flat bordered>
+    <q-card
+      v-for="post in posts"
+      :key="post.id"
+      class="card-post" 
+      flat 
+      bordered
+    >
       <q-item>
         <q-item-section avatar>
           <q-avatar>
@@ -36,7 +42,34 @@ export default {
   data(){
     return {
       posts: [
-        
+        {
+          id: 1,
+          caption: 'Golden Gate Bridge',
+          date: 1600426822339,
+          location: 'San Francisco',
+          imgUrl: 'https://cdn.quasar.dev/img/parallax2.jpg'
+        },
+        {
+          id: 2,
+          caption: 'Golden Gate Bridge',
+          date: 1600426822339,
+          location: 'San Francisco',
+          imgUrl: 'https://cdn.quasar.dev/img/parallax2.jpg'
+        },
+        {
+          id: 3,
+          caption: 'Golden Gate Bridge',
+          date: 1600426822339,
+          location: 'San Francisco',
+          imgUrl: 'https://cdn.quasar.dev/img/parallax2.jpg'
+        },
+        {
+          id: 4,
+          caption: 'Golden Gate Bridge',
+          date: 1600426822339,
+          location: 'San Francisco',
+          imgUrl: 'https://cdn.quasar.dev/img/parallax2.jpg'
+        }
       ]
     }
   }
