@@ -9,32 +9,42 @@
         </q-item-section>
 
         <q-item-section>
-          <q-item-label>Title</q-item-label>
+          <q-item-label class="text-bold">Martin_Byrne</q-item-label>
           <q-item-label caption>
-            Subhead
+            Dublin, Ireland
           </q-item-label>
         </q-item-section>
       </q-item>
 
       <q-separator />
 
-      <q-card-section horizontal>
-        <q-card-section>
-          {{ lorem }}
-        </q-card-section>
+      <q-img
+        src="https://cdn.quasar.dev/img/parallax2.jpg"
+      />
+      <q-card-section>
+        <div class="text-h6">Golden Gate Bridge</div>
+        <div class="text-caption text-grey">June 01 10.00AM</div>
+      </q-card-section>      
 
-        <q-separator vertical />
-
-        <q-card-section class="col-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </q-card-section>
-      </q-card-section>
     </q-card>
   </q-page>
 </template>
 
 <script>
 export default {
-  name: 'PageHome'
+  name: 'PageHome',
+  data(){
+    return {
+      posts: [
+        
+      ]
+    }
+  }
 }
 </script>
+
+<style lang="sass">
+  .card-post
+    q-img
+      min-height: 200px
+</style>
