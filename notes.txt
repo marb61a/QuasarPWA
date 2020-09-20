@@ -119,4 +119,10 @@ Create a list of posts
         - Posts are simply duplicates at this stage with different id numbers
     - A key property is also needed to help identify each item (can prevent errors eg updating the wrong post)
         - Use the post.id as a key
-    -
+    - To format the Epoch date being used Quasar has in built date formatting
+        - Piping not working so nicedate function preventing rendering of fomatted date
+    - Quasar has a 12 point column system
+        - To use simply create a row div and then column divs inside
+        - These will be equal by default 
+            - Specific width can be added
+    - 
