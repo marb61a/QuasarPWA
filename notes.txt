@@ -125,4 +125,6 @@ Create a list of posts
         - To use simply create a row div and then column divs inside
         - These will be equal by default 
             - Specific width can be added
-    - 
+    - To have space between columns use a grid gutter
+        - q-gutter has different classes available
+    -
