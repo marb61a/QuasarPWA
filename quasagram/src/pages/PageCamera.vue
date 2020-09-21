@@ -6,6 +6,30 @@
         src="https://cdn.quasar.dev/img/parallax2.jpg"
       >
     </div>
+    <div class="text-center q-pa-md">
+      <q-btn 
+        color="grey-10"
+        icon="eva-camera"
+        size="lg"
+        round
+      />
+      <div class="row justify-center q-ma-md">
+        <q-input 
+          v-model="text"
+          class="col"
+          label="Caption"
+          dense
+        />
+      </div>
+      <div class="row justify-center q-ma-md">
+        <q-input 
+          v-model="text"
+          class="col"
+          label="Location"
+          dense
+        />
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -17,6 +41,6 @@ export default {
 
 <style lang="sass">
   .camera-frame
-    border-frame: 2px solid $grey-10
+    border: 2px solid $grey-10
     border-radius: 10px
 </style>

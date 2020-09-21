@@ -134,4 +134,8 @@ Create a list of posts
 
 Camera Page
     - Full-width class can be used to make an image the full width of a page
-    
+    - Using round button available at Quasar
+        - The size property can be used to increase button size with various units
+    - justify-center will justify rows to the centre of a div
+    - Using a standard text-input (q-input standard)
+    - 
