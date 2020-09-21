@@ -142,4 +142,7 @@ Camera Page
         - This is accompanied by a v-slot:append property and then the button field
         - This can be added to a q-input which has been changed from self closing
     - Using unelevated rounded button for submit
+    - V-model error will exist until data setup on the component
+        - Change from text to post.caption and post.location
+    - Quasar has a utility for generating unique id's (uid)
     - 
