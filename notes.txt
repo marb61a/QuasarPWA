@@ -127,4 +127,11 @@ Create a list of posts
             - Specific width can be added
     - To have space between columns use a grid gutter
         - q-gutter has different classes available
-    -
+    - To ensure that profile is not lost on scrolling used the fixed class
+    - Mini profile should not be seen on mobile
+        - Use the large screen only class
+        - Post width will have to be increased (responsive)
+
+Camera Page
+    - Full-width class can be used to make an image the full width of a page
+    
