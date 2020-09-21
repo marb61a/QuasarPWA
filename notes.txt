@@ -138,4 +138,8 @@ Camera Page
         - The size property can be used to increase button size with various units
     - justify-center will justify rows to the centre of a div
     - Using a standard text-input (q-input standard)
+    - To add a button to an input field use template tag
+        - This is accompanied by a v-slot:append property and then the button field
+        - This can be added to a q-input which has been changed from self closing
+    - Using unelevated rounded button for submit
     - 
