@@ -178,6 +178,19 @@ Adding Native Functionality to Camera Page
         - The get context method needs to be called prior to drawing on the canvas
         - The drawImage method can then be used which will take several parameters
             - The first parameter will be the current frame from the video element 
-            - 
-        - 
+            - The second parameter is where to commence drawing ( top-left in this case = 0)
+            - The third parameter will be the y co-ordinate (0)
+            - The third and fourth parameters are the canvas width and height
+    - Once an image is captured the video element will need to be hidden
+        - Add an imageCaptured property to data and initially set to false
+        - Then in the captureImage method set the property to true
+        - v-show directives will then need to be added to video and canvas
+        - v-show is used instead of v-if as v-if removes the element completely from the DOM
+            - This will functionality not to work 
+    - After the image has been capture it will need to be stored in the photo property of data
+        - This has been set to null 
+        - Data can be gotten as Base64 data using the toDataURL function
+        - It is not good practice to store large data files, file will need to be changed to a blob file
+            - BLOB -- Binary Large Object
+        - A URI to BLOB function will need to be added
     -
