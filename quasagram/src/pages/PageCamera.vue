@@ -1,10 +1,10 @@
 <template>
   <q-page class="constrain-more q-pa-md">
     <div class="camera-frame q-pa-md">
-      <img 
+      <video 
         class="full-width"
-        src="https://cdn.quasar.dev/img/parallax2.jpg"
-      >
+        autoplay
+      />
     </div>
     <div class="text-center q-pa-md">
       <q-btn 
@@ -65,6 +65,14 @@ export default {
         date: Date.now()
       }
     }
+  },
+  methods: {
+    initCamera(){
+      console.log('Init Camera');
+    }
+  },
+  mounted(){
+    this.initCamera();
   }
 }
 </script>

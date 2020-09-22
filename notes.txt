@@ -145,4 +145,15 @@ Camera Page
     - V-model error will exist until data setup on the component
         - Change from text to post.caption and post.location
     - Quasar has a utility for generating unique id's (uid)
+
+Adding Native Functionality to Camera Page
+    - Replace the image element in the camera frame div with a video element
+        - This is so that user's camera feed can be streamed to the element
+        - The element is changed to self-closing
+    - The element should be set to full width
+        - An autoplay property is added to ensure that the element is played as soon as the feed is received
+    - A method will need to be added for initialising the camera
+        - Using the methods object
+        - This will be ran when a user goes to the camera page
+        - This will be done inside a mounted hook
     - 
