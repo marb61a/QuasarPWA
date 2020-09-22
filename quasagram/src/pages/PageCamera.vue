@@ -2,6 +2,7 @@
   <q-page class="constrain-more q-pa-md">
     <div class="camera-frame q-pa-md">
       <video 
+        ref="video"
         class="full-width"
         autoplay
       />
@@ -52,6 +53,7 @@
 
 <script>
 import { uid } from 'quasar'
+require('md-gum-polyfill')
 
 export default {
   name: 'PageCamera',
@@ -68,7 +70,12 @@ export default {
   },
   methods: {
     initCamera(){
-      console.log('Init Camera');
+      navigator.mediaDevices.getUserMedia({
+        video: true
+      })
+        .then(stream => {
+          this.$refs.video.src = stream
+        });
     }
   },
   mounted(){

@@ -156,4 +156,15 @@ Adding Native Functionality to Camera Page
         - Using the methods object
         - This will be ran when a user goes to the camera page
         - This will be done inside a mounted hook
-    - 
+    - Access to the camera stream can be gotten using the get user media method
+        - navigator.mediaDevices.getUserMedia
+        - This will take an object with video option set to true
+        - This returns a promise so will need a then block which retruns a stream
+        - This can be passed to the video element via the src property
+        - A ref needs to be added to the video element
+        - The video element is then accessed in the then block using this.$refs
+    - Not all broswers support the getUserMedia method particularly older browser
+        - A polyfill will be needed to allow use on older browsers
+        - In this case md-gum-polyfill
+            - Simply add a requirement to the script block and it should work
+    -
