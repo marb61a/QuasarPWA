@@ -167,4 +167,17 @@ Adding Native Functionality to Camera Page
         - A polyfill will be needed to allow use on older browsers
         - In this case md-gum-polyfill
             - Simply add a requirement to the script block and it should work
+    - When the user clicks the camera page button the current frame should be captured
+        - This will be saved as a still image using a canvas element
+    - A canvas element will have the captured frame drawn as an image on it
+        - The element can be added after the video element as will need a ref and to be full-width
+        - Add a click method to the button (@click)
+        - Access will be needed to both video and canvas elements (Use refs)
+        - Canvas dimensions will need to match video dimensions
+             - Using the getBoundingClientRect method (height and width)
+        - The get context method needs to be called prior to drawing on the canvas
+        - The drawImage method can then be used which will take several parameters
+            - The first parameter will be the current frame from the video element 
+            - 
+        - 
     -
