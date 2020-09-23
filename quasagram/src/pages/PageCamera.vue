@@ -25,12 +25,14 @@
       />
       <q-file
         v-else
-        v-model="model"
+        v-model="imageUpload"
+        @input="captureImageFallback"
         label="Choose an image"
+        accept="image/*"
         outlined 
       >
         <template v-slot:prepend>
-          <q-icon name="attach_file"/>
+          <q-icon name="eva-attach-outline"/>
         </template>
       </q-file>
       <div class="row justify-center q-ma-md">
@@ -86,6 +88,7 @@ export default {
         date: Date.now()
       },
       imageCaptured: false,
+      imageUpload: [],
       hasCameraSupport: true
     }
   },
@@ -110,6 +113,19 @@ export default {
       this.imageCaptured = true;
       this.post.photo = this.dataURItoBlob(canvas.toDataURL());
 
+    },
+    captureImageFallback(file){
+      this.post.photo = file;
+
+      var reader = new FileReader();
+      reader.onload() = (event) => {
+        var img = new Image();
+        img.onload() = () => {
+          canvas.width = img.width;
+          canvas.height = img.height;
+
+        }
+      }
     },
     dataURItoBlob(dataURI){
       // Convert Base64 to raw binary data which is held in a string

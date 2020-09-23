@@ -206,5 +206,14 @@ Adding Native Functionality to Camera Page
         - There will be a file upload component to replace the capture button 
             - Quasar site -> Components -> Form Components -> File Picker
             - Using component with clip icon attached
-        -
-    - 
+        - An imageUpload property will need to be added to store the uploaded image
+            - This will need to be an array/filelist
+            - Use the accept property to accept only image files
+        - v-model will be set to imageUpload
+            - Can bee seen in Vue dev tools PageCamera -> imageUpload should be set to file
+    - Displaying uploaded image inside photo frame (already exists)
+        - Needs to have an event input which is triggered on selection of a file
+        - Add a captureImageFallback method to capture the upload image
+        - Image will need to be uploaded into a HTML5 canvas
+        - Change the functions to arrow functions to enable access to this keyword
+    -
