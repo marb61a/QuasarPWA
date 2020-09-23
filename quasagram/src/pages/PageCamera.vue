@@ -112,20 +112,32 @@ export default {
       context.drawImage(video, 0, 0, canvas.width, canvas.height);
       this.imageCaptured = true;
       this.post.photo = this.dataURItoBlob(canvas.toDataURL());
-
+      this.disableCamera();
     },
     captureImageFallback(file){
       this.post.photo = file;
 
+      let canvas = this.$refs.canvas;
+      let context = canvas.getContext('2d');
+
       var reader = new FileReader();
-      reader.onload() = (event) => {
+      reader.onload = (event) => {
         var img = new Image();
-        img.onload() = () => {
+        img.onload = () => {
           canvas.width = img.width;
           canvas.height = img.height;
-
+          context.drawImage(img, 0, 0);
+          this.imageCaptured = true;
         }
+        img.src = event.target.result;
       }
+
+      reader.readAsDataURL(file);
+    },
+    disableCamera(){
+      this.$refs.video.srcObject.getVideoTracks().forEach(track => {
+        track.stop();
+      });
     },
     dataURItoBlob(dataURI){
       // Convert Base64 to raw binary data which is held in a string

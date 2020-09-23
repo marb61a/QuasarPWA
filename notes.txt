@@ -216,4 +216,9 @@ Adding Native Functionality to Camera Page
         - Add a captureImageFallback method to capture the upload image
         - Image will need to be uploaded into a HTML5 canvas
         - Change the functions to arrow functions to enable access to this keyword
+        - Canvas is still hidden by default due to video element being shown first
+        - Once the image has been captured set the imageCaptured property to true
+    - Camera will need to be disabled after capturing image/leaving the page
+        - Using image capture camera still continues to run even after leaving page
+        - Add a disableCamera method
     -
