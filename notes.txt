@@ -187,10 +187,11 @@ Adding Native Functionality to Camera Page
         - v-show directives will then need to be added to video and canvas
         - v-show is used instead of v-if as v-if removes the element completely from the DOM
             - This will functionality not to work 
-    - After the image has been capture it will need to be stored in the photo property of data
+    - After the image has been captured it will need to be stored in the photo property of data
         - This has been set to null 
         - Data can be gotten as Base64 data using the toDataURL function
         - It is not good practice to store large data files, file will need to be changed to a blob file
             - BLOB -- Binary Large Object
         - A URI to BLOB function will need to be added
+            - Comments in the function explain process
     -

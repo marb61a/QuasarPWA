@@ -99,6 +99,26 @@ export default {
     },
     dataURItoBlob(dataURI){
       // Convert Base64 to raw binary data which is held in a string
+      // It does not handle URLEncoded DataURI's
+      var byteString = atob(dataURI.split(',')[1]);
+
+      // Separate out the MIME component
+      var mimeString = dataURI.split(',')[0].split(':')[1].split(',')[0];
+
+      // Write the bytes of the string to an ArrayBuffer
+      var ab = new ArrayBuffer(byteString.length);
+
+      // Create a view into the buffer
+      var ia = new Uint8Array(ab);
+
+      // Set the bytes of the buffer to the correct values
+      for(var i = 0; i < byteString.length; i++){
+        ia[i] = byteString.charCodeAt(i);
+      }
+
+      // Write the ArrayBuffer to a BLOB
+      var blob = new Blob([ab], {type: mimeString});
+      return blob;
       
     }
   },
