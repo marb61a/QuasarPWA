@@ -15,13 +15,24 @@
       />
     </div>
     <div class="text-center q-pa-md">
-      <q-btn 
+      <q-btn
+        v-if="hasCameraSupport"
         @click="captureImage"
         color="grey-10"
         icon="eva-camera"
         size="lg"
         round
       />
+      <q-file
+        v-else
+        v-model="model"
+        label="Choose an image"
+        outlined 
+      >
+        <template v-slot:prepend>
+          <q-icon name="attach_file"/>
+        </template>
+      </q-file>
       <div class="row justify-center q-ma-md">
         <q-input 
           v-model="post.caption"
@@ -74,7 +85,8 @@ export default {
         photo: null,
         date: Date.now()
       },
-      imageCaptured: false
+      imageCaptured: false,
+      hasCameraSupport: true
     }
   },
   methods: {
@@ -84,6 +96,8 @@ export default {
       })
         .then(stream => {
           this.$refs.video.src = stream
+        }).catch(error => {
+          this.hasCameraSupport = false;
         });
     },
     captureImage(){
@@ -119,7 +133,7 @@ export default {
       // Write the ArrayBuffer to a BLOB
       var blob = new Blob([ab], {type: mimeString});
       return blob;
-      
+
     }
   },
   mounted(){

@@ -194,4 +194,17 @@ Adding Native Functionality to Camera Page
             - BLOB -- Binary Large Object
         - A URI to BLOB function will need to be added
             - Comments in the function explain process
-    -
+    - Some broswers may not support camera accessed
+        - The app should still be able to function with a fallback
+        - In this case image upload functionality would provide the fallback
+        - Add a new property to data (hasCameraSupport : true)
+        - The getUserMedia method will return an error if the user does not have camera support/access
+        - There will need to be a catch block added to manage the error
+            - This will set hasCameraSupport to false
+        - Then add a v-if to the image capture button 
+        - The capture button will disappear if capture functionality is unavailable
+        - There will be a file upload component to replace the capture button 
+            - Quasar site -> Components -> Form Components -> File Picker
+            - Using component with clip icon attached
+        -
+    - 
