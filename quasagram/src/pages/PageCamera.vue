@@ -168,17 +168,30 @@ export default {
       navigator.geolocation.getCurrentPosition(position => {
         this.getCityAndCountry(position)
       }, err => {
-        console.log('Err : ', err)
+        this.locationError();
       }, {
         timeout: 7000
       });
     },
-    getCityAndCountry(){
-      let apiUrl = `https://geocode.xyz/${position.coords.latitude},${position.coords.longtitude}?json=1`;
+    getCityAndCountry(position){
+      let apiUrl = `https://geocode.xyz/${ position.coords.latitude },${ position.coords.longtitude }?json=1`;
 
       this.$axios.get(apiUrl).then(result => {
         console.log('result : ', result);
+        this.locationSuccess(result);
+      }).catch(err => {
+        this.locationError();
       });
+    },
+    locationSuccess(result){
+      this.post.location = result.data.city;
+
+      if(result.data.country){
+        this.post.location += `, ${ result.data.country }`;
+      }
+    },
+    locationError(){
+      
     }
   },
   mounted(){

@@ -240,5 +240,13 @@ Getting User location
         - Parameters from logging out can be interchanged to give current location
         - Change the console log to use getCityAndCountry method
         - Use axios to get the interpolated URL 
-        - 
+        - Add a locationSuccess method to be able to access the information returned from the geocode API
+    - Handling errors
+        - There are several errors which may occur so need to be handled
+        - Both the GeoCode API and the location may cause issues
+        - Replace the current console logging of errors with a custom method
+        - A dialog will be presented to the user in the event of an error occuring
+        - There is a plugin on the Quasar site
+            - This will need to be added to the Quasar config file
+        -
     -
