@@ -248,5 +248,11 @@ Getting User location
         - A dialog will be presented to the user in the event of an error occuring
         - There is a plugin on the Quasar site
             - This will need to be added to the Quasar config file
-        -
+            - Add dialog to the plugins section
+    - Loading State
+        - It can take time for the location field to populate
+        - Quasar has a plugin for loading but it takes over the whole page
+            - This means that the user cannot do anything else
+        - There is a loading state available on textfields in Quasar
+        -  
     -
