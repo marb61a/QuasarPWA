@@ -230,6 +230,15 @@ Getting User location
         - Add a click handler to the location button
             - This will trigger a getLocation method
             - This will use navigator.geolocation.getCurrentPosition from the API
-            - This will return a position object
-        -
+            - This will return a position object, then add an error handler
+            - Also add an object for the 3rd parameter which will have timeout property
+    - Get City & Country Name
+        - Latitude and Longtitude can be passed to GeoCode API to get city names
+        - Using -- https://geocode.xyz/
+        - The API to be used in this case is the reverse geocoding API
+            - https://geocode.xyz/51.50354,-0.12768?json=1
+        - Parameters from logging out can be interchanged to give current location
+        - Change the console log to use getCityAndCountry method
+        - Use axios to get the interpolated URL 
+        - 
     -
