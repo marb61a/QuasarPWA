@@ -51,7 +51,8 @@
           dense
         >
           <template v-slot:append>
-            <q-btn 
+            <q-btn
+              @click="getLocation"
               round 
               dense 
               flat 
@@ -162,10 +163,20 @@ export default {
       var blob = new Blob([ab], {type: mimeString});
       return blob;
 
+    },
+    getLocation(){
+      navigator.geolocation.getCurrentPosition(position => {
+
+      });
     }
   },
   mounted(){
     this.initCamera();
+  },
+  beforeDestroy(){
+    if(this.hasCameraSupport){
+      this.disableCamera();
+    }
   }
 }
 </script>

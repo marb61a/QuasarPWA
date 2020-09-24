@@ -221,4 +221,15 @@ Adding Native Functionality to Camera Page
     - Camera will need to be disabled after capturing image/leaving the page
         - Using image capture camera still continues to run even after leaving page
         - Add a disableCamera method
+
+Getting User location
+    - Using the JS Geolocation API
+    - Getting User location co-ordinates
+        - Ideally would be done by when clicking the location button
+        - JS Geolocation API -- https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+        - Add a click handler to the location button
+            - This will trigger a getLocation method
+            - This will use navigator.geolocation.getCurrentPosition from the API
+            - This will return a position object
+        -
     -
