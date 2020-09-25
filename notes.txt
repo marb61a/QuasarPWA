@@ -263,3 +263,21 @@ Getting User location
             - If there is a Geolocation object in the browser console then geolocation is supported
         - After removing the log add computed object to check location support
         - Nearly all modern broswers support Geolocation
+
+Firebase
+    - Firebase will be used to create a backend for the app, store images and also host the app
+        - Firebase is an all in one backend solution from Google
+            - There are many things available in Firebase
+            - Authentication including Email, Password and OAuth using sites such as Twitter, Facebook etc
+            - 2 different databases -- Cloud Firestore and the Realtime Database
+        - Cloud Firestore will be used (the newer DB)
+            - Using endpoints instead of Firebase frontend API
+            - Backend is needed to have push notifications available
+            - The DB scales automatically
+        - There are numerous API available for interacting with Firebase    
+            - This will be done on the backend here through endpoints
+            - Cloud functions are now a paid option
+    - Using Firestore in the App
+        - Firestore db are arranged in collections and documents
+        - There will a document for each post
+        - There will also be a document for each subscription (user and browser/device)
