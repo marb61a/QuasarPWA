@@ -255,4 +255,11 @@ Getting User location
             - This means that the user cannot do anything else
         - There is a loading state available on textfields in Quasar
         -  
-    -
+    - Hide location button
+        - This will be useful when geolocation is not supported
+        - There is little point in a location button that will not work
+        - The navigator object will show if there is geolocation support in the user's browser
+        - Add a console.log to the mounted hook to check navigator
+            - If there is a Geolocation object in the browser console then geolocation is supported
+        - After removing the log add computed object to check location support
+        - Nearly all modern broswers support Geolocation
