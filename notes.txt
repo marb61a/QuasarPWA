@@ -281,3 +281,17 @@ Firebase
         - Firestore db are arranged in collections and documents
         - There will a document for each post
         - There will also be a document for each subscription (user and browser/device)
+        - Add a new project and name (disable analytics)
+            - Create a new database
+            - Start in test mode so that it can be written to and read from easily
+        - Start a new posts collection
+            - Add a first document called id1
+            - Then add fields, first field is caption (string and set to golden gate bridge)
+            - Second add location field (San Francisco -- String)
+            - Third field is the image url, this is a string an a path to an image file
+            - Fourth field is date of image, this will be a number
+            - Fifth and final field is id field, set to string and id1
+        - Adding image storage
+            - At the beginning images are coming from imgur to test
+            - 
+        -
