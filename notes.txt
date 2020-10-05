@@ -29,7 +29,7 @@ Folder Structure
             - Axios will be used during the project
     - CSS folder will hold css depending on what options where chosen in setup
     - There was a /src/statics folder this has been replaced by /public folder
-        - Assets can be added here to but will only be loaded not processed by Webpack
+        - Assets can be added here too but will only be loaded not processed by Webpack
 
 Install Vue devtools on Chrome
 
@@ -294,4 +294,6 @@ Firebase
         - Adding image storage
             - At the beginning images are coming from imgur to test
             - 
-        -
+
+Creating a backend
+    - 
