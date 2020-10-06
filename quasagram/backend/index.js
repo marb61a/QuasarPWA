@@ -18,6 +18,4 @@ app.get('/posts', (req, res) => {
     res.send(posts);
 });
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
-});
+app.listen(process.env.PORT || port);

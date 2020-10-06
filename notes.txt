@@ -322,4 +322,9 @@ Deploying backend to Heroku
     - Once the cli is installed the is a tool Heroku builds available to simplify deployment
         - https://github.com/heroku/heroku-builds
     - Heroku build needs to be ran from the folder to be deployed
-    - 
+    - Will need to use Powershell on Windows (from the folder)
+        - Terminal inbuilt on VS code giving errors but none with Powershell
+        - There may be initial error while checking login status
+    - There maybe errors due to nodemon being installed globally so install locally
+    - There will also be an error if the listen is bound to a port rather the allow dynamic assignment
+    -
