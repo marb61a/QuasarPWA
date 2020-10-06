@@ -3,8 +3,17 @@ const app = express();
 const port = 3000;
 
 // Middleware
-app.get('/', (req, res) => {
-    res.send("Hello Word");
+app.get('/posts', (req, res) => {
+    let posts = [
+        {
+            caption: 'Golden Gate Bridge',
+            location: 'San Francisco'
+        },
+        {
+            caption: 'Kilmainham Gaol',
+            location: 'Dublin'
+        }
+    ]
 });
 
 app.listen(port, () => {

@@ -296,4 +296,18 @@ Firebase
             - 
 
 Creating a backend
+    - Create and launch a backend locally
+        - Adding a folder called backend to root of project
+        - Inside the backend folder add npm and install express
+        - Add index.js to folder
+        - Add sample code
+        - Use node index.js to run the file, there should be a console message
+    - Auto restarting with Nodemon
+        - At this point the app has to be stopped and restarted manually for changes to take effect
+        - This can be very inefficient which is where Nodemon comes in
+        - It will be installed globally
+        - Add an entry to backend folder package.json to run Nodemon by entering npm start
+    - Adding a simple endpoint
+        - Add an app GET request to posts and add some dummy data
+        - 
     - 
