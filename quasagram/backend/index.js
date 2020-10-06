@@ -14,6 +14,8 @@ app.get('/posts', (req, res) => {
             location: 'Dublin'
         }
     ]
+
+    res.send(posts);
 });
 
 app.listen(port, () => {

@@ -293,7 +293,10 @@ Firebase
             - Fifth and final field is id field, set to string and id1
         - Adding image storage
             - At the beginning images are coming from imgur to test
-            - 
+            - This will change as storage on Firestore will be setup to store images
+            - Setup will setup a storage bucket which will hold images
+            - Images can then be uploaded to the bucket
+            - This will be done automatically once an image is taken when backend is setup
 
 Creating a backend
     - Create and launch a backend locally
@@ -308,6 +311,15 @@ Creating a backend
         - It will be installed globally
         - Add an entry to backend folder package.json to run Nodemon by entering npm start
     - Adding a simple endpoint
-        - Add an app GET request to posts and add some dummy data
-        - 
+        - Add an app GET request to posts (/posts) and add some dummy data
+
+Deploying backend to Heroku
+    - There are multiple free options available for deploying the backend
+    - Heroku is being used for simplicity
+        - https://www.heroku.com/
+    - There is a signup involved 
+    - Will need to install the Heroku cli (There are packages for the different platforms)
+    - Once the cli is installed the is a tool Heroku builds available to simplify deployment
+        - https://github.com/heroku/heroku-builds
+    - Heroku build needs to be ran from the folder to be deployed
     - 
