@@ -332,5 +332,11 @@ Deploying backend to Heroku
 Connecting Posts    
     - Need to connect to the Firestore
         - In the backend folder add the firebase-admin to dev-dependencies
-        - 
-    - 
+        - There will need to be an account key added which can be gotten in the Firebase console
+    - After connection then code for reading in data(posts) will be added
+        - The array holding hardcoded posts can be emptied so it is blank
+        - The posts being fetched then will be passed into the array 
+    - After grabbing posts the data is in JSON format
+        - This is not good for displaying on the home page
+        - To display on home page a method will need to be added to methods on PageHome.vue
+    -

@@ -56,6 +56,8 @@
 </template>
 
 <script>
+import date from 'quasar'
+
 export default {
   name: 'PageHome',
   data(){
@@ -91,6 +93,9 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+
   },
   filters: {
     niceDate(value){

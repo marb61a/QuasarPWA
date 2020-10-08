@@ -15,18 +15,17 @@ const port = 3000;
 
 // Middleware
 app.get('/posts', (req, res) => {
-    let posts = [
-        {
-            caption: 'Golden Gate Bridge',
-            location: 'San Francisco'
-        },
-        {
-            caption: 'Kilmainham Gaol',
-            location: 'Dublin'
-        }
-    ]
+    let posts = [];
 
-    res.send(posts);
+    db.collection('users').get()
+        .then(snapshot => {
+            snapshot.forEach((doc) => {
+                // console.log(doc.id, '=>', doc.data());
+                posts.push(doc.data());
+            });
+
+            res.send(posts);
+        });
 });
 
 app.listen(process.env.PORT || port);
