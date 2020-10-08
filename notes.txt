@@ -339,4 +339,10 @@ Connecting Posts
     - After grabbing posts the data is in JSON format
         - This is not good for displaying on the home page
         - To display on home page a method will need to be added to methods on PageHome.vue
+        - Add a created hook which will trigger the getPosts method
+        - There will be errors when fetching due to CORS issues
+        - CORS issue can be solved by setting the response headers
+            - This is the Access-Control-Allow-Origin header which should be set to *
+            - This will allow any server or origin to access the endpoint
+        - 
     -

@@ -15,6 +15,8 @@ const port = 3000;
 
 // Middleware
 app.get('/posts', (req, res) => {
+    res.set('Access-Control-Allow-Origin', '*');
+
     let posts = [];
 
     db.collection('users').get()
