@@ -327,4 +327,10 @@ Deploying backend to Heroku
         - There may be initial error while checking login status
     - There maybe errors due to nodemon being installed globally so install locally
     - There will also be an error if the listen is bound to a port rather the allow dynamic assignment
-    -
+    - https://qgram-bckend.herokuapp.com/posts
+
+Connecting Posts    
+    - Need to connect to the Firestore
+        - In the backend folder add the firebase-admin to dev-dependencies
+        - 
+    - 
