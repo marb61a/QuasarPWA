@@ -357,5 +357,8 @@ Connecting Posts
         - This is not good practice and should be avoided
         - Add a new data property called loadingPosts which is set to posts
         - This will display something else to the user while posts load 
-        - 
+        - Add a couple of template tags, one v-if for if posts don't load and the other v-else for when they do
+        - The loadingPosts will need to be set to true prior to the timeout method
+        - After the getPosts has been ran the loadingPosts will need to be set back to false
+        - Will use skeleton animation while waiting for posts to load
     -
