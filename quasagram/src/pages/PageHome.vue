@@ -2,39 +2,35 @@
   <q-page class="constrain q-pa-md">
     <div class="row q-col-gutter-lg">
       <div class="col-12 col-sm-8">
-        <q-card
-          v-for="post in posts"
-          :key="post.id"
-          class="card-post q-mb-md" 
-          flat 
-          bordered
-        >
-        <q-item>
-          <q-item-section avatar>
-            <q-avatar>
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
-            </q-avatar>
-          </q-item-section>
-
+        <template>
+          <q-card
+            v-for="post in posts"
+            :key="post.id"
+            class="card-post q-mb-md" 
+            flat 
+            bordered
+          >
+          <q-item>
           <q-item-section>
             <q-item-label class="text-bold">Martin_Byrne</q-item-label>
-            <q-item-label caption>
-              {{ post.location }}
-            </q-item-label>
-          </q-item-section>
-        </q-item>
+                <q-item-label caption>
+                  {{ post.location }}
+                </q-item-label>
+              </q-item-section>
+            </q-item>
 
-        <q-separator />
+            <q-separator />
 
-        <q-img
-          :src="post.imgUrl"
-        />
-        <q-card-section>
-          <div>{{ post.caption }}</div>
-          <div class="text-caption text-grey">{{ post.date}}</div>
-        </q-card-section>      
+            <q-img
+              :src="post.imgUrl"
+            />
+            <q-card-section>
+              <div>{{ post.caption }}</div>
+              <div class="text-caption text-grey">{{ post.date | niceDate}}</div>
+            </q-card-section> 
+          </q-card>
+        </template>
 
-      </q-card>
         </div>
         <div class="col-4 large-screen-only">
           <q-item class="fixed">
@@ -62,7 +58,8 @@ export default {
   name: 'PageHome',
   data(){
     return {
-      posts: []
+      posts: [],
+      loadingPosts: false
     }
   },
   methods: {

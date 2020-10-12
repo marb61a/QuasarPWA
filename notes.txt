@@ -354,5 +354,8 @@ Connecting Posts
     - Handle Loading
         - Requests to endpoints can take a lot of time on occasion
         - This means the user being left with a blank screen
+        - This is not good practice and should be avoided
+        - Add a new data property called loadingPosts which is set to posts
+        - This will display something else to the user while posts load 
         - 
     -
