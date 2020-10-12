@@ -344,5 +344,15 @@ Connecting Posts
         - CORS issue can be solved by setting the response headers
             - This is the Access-Control-Allow-Origin header which should be set to *
             - This will allow any server or origin to access the endpoint
+    - Sorting Posts By date
+        - Need to sort posts by descending date order
+        - This will be done on the backend rather than the front
+        - There is an orderBy method available which will take the date and desc parameters
+    - Error Handling
+        - Needed if there is an error in the app
+        - Simply add the could not find location error to the getPosts method
+    - Handle Loading
+        - Requests to endpoints can take a lot of time on occasion
+        - This means the user being left with a blank screen
         - 
     -

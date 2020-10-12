@@ -67,12 +67,18 @@ export default {
   },
   methods: {
     getPosts(){
-      this.$axios.get('http://localhost:3000/posts')
-        .then((res) => {
-          this.posts = res.data
-        }).catch(err => {
-          console.log('Error : ', err);
-        });
+      setTimeout(() => {
+        this.$axios.get('http://localhost:3000/posts')
+          .then((res) => {
+            this.posts = res.data
+          }).catch(err => {
+            this.$q.dialog({
+              title: 'Error',
+              message: 'Could not find location'
+            });
+
+          });
+      }, 3000)
     }
   },
   filters: {

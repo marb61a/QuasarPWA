@@ -19,7 +19,9 @@ app.get('/posts', (req, res) => {
 
     let posts = [];
 
-    db.collection('users').get()
+    db.collection('users')
+        .orderBy('date', 'desc')
+        .get()
         .then(snapshot => {
             snapshot.forEach((doc) => {
                 // console.log(doc.id, '=>', doc.data());
